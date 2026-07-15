@@ -1,0 +1,40 @@
+$TTL 86400
+@   IN  SOA ns1.whitera.in. admin.whitera.in. (
+        2024062302  ; Serial
+        3600        ; Refresh
+        1800        ; Retry
+        604800      ; Expire
+        86400 )     ; Minimum TTL
+
+; Name servers
+@       IN  NS      ns1.whitera.in.
+
+; A Records
+@       IN  A       192.0.2.1
+www     IN  A       192.0.2.1
+mail    IN  A       192.0.2.1
+db      IN  A       192.0.2.1
+ns1     IN  A       192.0.2.1
+
+; MX Record
+@       IN  MX  10  mail.whitera.in.
+
+; SPF Record
+@       IN  TXT     "v=spf1 mx ~all"
+
+; DMARC Record
+_dmarc  IN  TXT     "v=DMARC1; p=quarantine; rua=mailto:admin@whitera.in"
+; This is a zone-signing key, keyid 48226, for whitera.in.
+; Created: 20260624080438 (Wed Jun 24 08:04:38 2026)
+; Publish: 20260624080438 (Wed Jun 24 08:04:38 2026)
+; Activate: 20260624080438 (Wed Jun 24 08:04:38 2026)
+
+whitera.in. IN DNSKEY 256 3 8 AwEAAaKDRjXii29ik3lVsPdb6vxKuk8d/ZvjqAaSvrWYCsdx5/nKPSv8 +3JI/Vqs460dETJJBm/PhwJ60XyXKFyme4IuN9jjGvWsTFl9JZj5H16A S8/O3zBaWGigZ3dwjTGmEA0oLrnfPK/QaUwk2dMHmDQNKOd/9j9IxDKN SR5CBfxp
+; This is a key-signing key, keyid 53639, for whitera.in.
+; Created: 20260624080542 (Wed Jun 24 08:05:42 2026)
+; Publish: 20260624080542 (Wed Jun 24 08:05:42 2026)
+; Activate: 20260624080542 (Wed Jun 24 08:05:42 2026)
+
+mail._domainkey IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDaFeC6GvEu7oPMQGdM8D0eroZBLQul04PXVuieexA+rAwtaWPa5tLKRUs19Ra+cleqNKKaFLmwb4iDquv01NRqaMphCM5zN8oA43Ahuvq6IuITZmVIQUFFCyYWKgwSTJWo1no2EtI5/LqkBJnwyauzneEwcDvwm+WNMPFaSIDi2wIDAQAB"
+
+whitera.in. IN DNSKEY 257 3 8 AwEAAZyrNjiAuSOajxJveHECqx5rovKTeScDml2RX9aLvDL4D9dcZzUT et1000/svoHHcm9KE/xLcQVyCR7Aqhefz3xByPIA+04TM4bqVmspExQN 5eNFh++rRCRupFkSCZxaqqY5svWhBcDxRqyem6GTkBc2mVrhED2UhKRw PT6/ZKbtw3UIgXFGMAL/DJXOn2mH7NJzkNvjMiBt8HJV9VlpmG9vdzPT codQIJ7CIDFbst0vSyLCQ18hpu5+dNKAPSlFVVU1f7hR4wGooHlgQtrK hjAWP8WO3VJxXX30bjb4i6mn/Xu12OlAkG9u1DzUi+O1dilmKwTnvA0D XBJ3bIObspM=

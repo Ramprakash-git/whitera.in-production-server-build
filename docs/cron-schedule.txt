@@ -1,0 +1,9 @@
+# Cron Schedule — whitera.in
+
+## Backup Automation
+0 2 * * *      /root/Scripts/dirbackups.sh >> /var/log/dirbackups.log 2>&1
+# Runs nightly at 2:00 AM — full backup with rotation
+
+## Health Monitoring
+*/15 * * * *   /root/Scripts/health_check.sh >> /var/log/health_check.log 2>&1
+# Runs every 15 minutes — checks service status, disk usage, and logs
