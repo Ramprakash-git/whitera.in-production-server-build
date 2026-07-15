@@ -1,3 +1,6 @@
+; DNSSEC zone signed with NSEC3 (not plain DNSSEC) to prevent zone enumeration.
+; Signing keys are excluded from this repo — see README.
+
 ; File written on Fri Jun 26 10:23:55 2026
 ; dnssec_signzone version 9.11.36-RedHat-9.11.36-16.el8_10.8
 whitera.in.		86400	IN SOA	ns1.whitera.in. admin.whitera.in. (

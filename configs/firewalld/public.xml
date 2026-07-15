@@ -1,3 +1,6 @@
+<!-- Rules scoped to only the ports required by this stack (SSH, HTTP/S, DNS, mail) —
+     default-deny posture, nothing opened beyond what's actually in use. -->
+
 <?xml version="1.0" encoding="utf-8"?>
 <zone>
   <short>Public</short>

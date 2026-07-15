@@ -1,3 +1,5 @@
+# Custom jail definitions added for SSH.
+
 [DEFAULT]
 bantime = 1h
 findtime = 10m
